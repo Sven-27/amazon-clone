@@ -1,7 +1,17 @@
 import React from 'react';
 import './CheckoutProduct.css';
 
-function CheckoutProduct(id, image, title, price, rating) {
+function CheckoutProduct({id, image, title, price, rating}) {
+
+    const removeFromBasket = () => {
+        //remove the item from the basket
+        dispatchEvent({
+            type: 'REMOVE_FROM_BASKET',
+            id: id,
+            
+        })
+    }
+    
     return (
         <div className="checkoutProduct">
            <img className="checkoutProduct__image" src={image} /> 
@@ -14,11 +24,11 @@ function CheckoutProduct(id, image, title, price, rating) {
                      <div className="checkoutProduct__rating">
                          {Array(rating)
                          .fill()
-                         .map((_, i) => (
+                         .map(() => (
                              <p>🤘</p>
                          ))}
                      </div>
-                     <button>Remove from Basket</button>
+                     <button onClick={removeFromBasket}>Remove from Basket</button>
            </div>
         </div>
     )
