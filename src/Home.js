@@ -4,11 +4,11 @@ import Product from './Product';
 
 function Home() {
     return (
-          <div className="Home">
-                <div className="home__container">
+         <div className="Home">
+            <div className="home__container">
                 <img className="home__image" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="" />
                
-            <div className="home__row">
+                <div className="home__row">
                 <Product 
                 id="12321341"
                 title="The lean startup: How Constant Innovation
@@ -22,7 +22,7 @@ function Home() {
                 price={118.99}
                 rating={4}
                 image="https://m.media-amazon.com/images/I/61aT8jl8THL._AC_UY327_FMwebp_QL65_.jpg"/>                
-        </div>
+                 </div>
             <div className="home__row">
             <Product 
             id="4903850"
@@ -54,7 +54,7 @@ function Home() {
             image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"/>
             </div>
                 </div>
-            </div>
+         </div>
     )
 }
 
